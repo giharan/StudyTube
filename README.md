@@ -41,3 +41,95 @@ The system uses **JWT-based authentication** for secure access.
 
 ### 📥 Registration
 Users can register by sending a request to:
+
+POST /auth/register
+
+
+Handled by:
+- `AuthController.register()`
+- Uses `RegisterRequest` DTO
+- Returns success or error response
+
+---
+
+### 🔑 Login
+Users authenticate using:
+
+POST /auth/login
+
+
+Handled by:
+- `AuthController.authenticate()`
+- Uses `AuthRequest` DTO
+- Returns JWT token on success
+
+---
+
+### ⚠️ Error Handling
+- Global exception handling inside `AuthController`
+- Returns meaningful error messages for:
+  - Registration failure
+  - Authentication failure
+  - Internal server errors
+
+---
+
+## ✨ Key Features
+
+### 👤 User Management
+- User registration & login
+- JWT authentication system
+- Secure API access
+
+### 📚 Learning System
+- Learning plan creation
+- Weekly progress tracking
+- Structured learning updates
+
+### 📝 Social Features
+- Post creation and sharing
+- Resource sharing system
+
+### 💬 Communication
+- Messaging system between users
+
+### 🔔 Notifications
+- User activity notifications
+
+---
+
+## ⚙️ Backend Technologies
+
+- Java 17+
+- Spring Boot
+- Spring Security
+- JWT (JSON Web Token)
+- Spring Data JPA
+- Maven
+- SLF4J Logging
+
+---
+
+## 🎨 Frontend Technologies
+
+- HTML5
+- CSS3
+- Tailwind CSS
+- JavaScript (Vanilla)
+
+---
+
+
+---
+
+## 🚀 How to Run the Project
+
+### 🖥️ Backend
+
+1. Open project in IntelliJ / Eclipse
+2. Configure `application.yml`
+3. Run:
+
+```bash
+mvn spring-boot:run
+
